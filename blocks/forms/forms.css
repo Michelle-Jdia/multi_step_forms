@@ -1,0 +1,11 @@
+.forms {
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.forms__show {
+  display: flex;
+}

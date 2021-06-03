@@ -1,0 +1,6 @@
+.forms-second-stage__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

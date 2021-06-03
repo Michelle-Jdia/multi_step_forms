@@ -1,0 +1,16 @@
+.forms__text-commit {
+  padding: 14px;
+  box-sizing: border-box;
+  margin: 0 auto 40px;
+  display: block;
+  outline: none;
+  border-radius: 5px;
+  background-color: #e6eade;
+  border: solid 1px rgb(12 12 12 / 45%);
+  width: 88%;
+  height: 50px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
