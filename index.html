@@ -18,35 +18,42 @@
                     <h1 class="forms__title">Текст скрипта: Есть много вариантов Lorem Ipsum, но большинство из них
                         имеет не всегда.</h1>
                 </div>
-                <form action="#" class="forms__form">
+                <form class="forms__form">
                     <label for="name-input" class="forms__label forms__label-name">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <input type="text" class="forms__input forms__nmae-input" placeholder="ФИО" id="name-input">
+                    <input type="text" class="forms__input forms__name-input" placeholder="ФИО" name="name"
+                        id="name-input" value="" onfocus="show(this)" onfocusout="hide(this)">
                     <label for="address-input" class="forms__label forms__label-address">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <input type="text" class="forms__input forms__address-input" placeholder="Адрес">
+                    <input type="text" class="forms__input forms__address-input" placeholder="Адрес" value=""
+                        name="address">
                     <label for="num-input" class="forms__label forms__label-num">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
                     <input type="tel" class="forms__input forms__num-input" placeholder="Номер телефона" id="num-input"
-                        pattern="^[0-9-+\s()]*$">
+                        pattern="^[0-9-+\s()]*$" value="" name="phone">
                     <label for="num-input-additional" class="forms__label forms__label-additional">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <input type="tel" class="forms__input forms__num-input-additional"
-                        placeholder="Дополнительный номер телефона" id="num-input-additional" pattern="^[0-9-+\s()]*$">
+                    <input type="tel" class="forms__input forms__num-input-additional" name="additional-phone"
+                        placeholder="Дополнительный номер телефона" id="num-input-additional" pattern="^[0-9-+\s()]*$"
+                        value="">
                     <label for="selector-city" class="forms__label forms__label-city">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <select name="" id="selector-city" class="forms__select">
-                        <option value="" class="forms__select-op">Москва</option>
-                        <option value="" class="forms__select-op">Санкт-петербург</option>
-                        <option value="" class="forms__select-op">Тула</option>
+                    <select name="" id="selector-city" class="forms__select selector-city">
+                        <option selected disabled value="" class="forms__select-op">Город</option>
+                        <option value="Москва" class="forms__select-op">Москва</option>
+                        <option value="Санкт-петербург" class="forms__select-op">Санкт-петербург</option>
+                        <option value="Тула" class="forms__select-op">Тула</option>
                     </select>
                     <label for="selector-reson" class="forms__label forms__label-reson">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <select name="selector-reson" id="" class="forms__select forms__select-reson">
-                        <option value="" class="forms__select-op forms__select-op-reson">причина один</option>
-                        <option value="" class="forms__select-op forms__select-op-reson">причина два
+                    <select name="selector-reson" id="select-reson" class="forms__select forms__select-reson">
+                        <option selected disabled value="" class="forms__select-op forms__select-op-reson">причина
+                            звонка </option>
+                        <option value="причина один" class="forms__select-op forms__select-op-reson">причина один
                         </option>
-                        <option value="" class="forms__select-op forms__select-op-reson">причина три</option>
+                        <option value="причина два" class="forms__select-op forms__select-op-reson">причина два
+                        </option>
+                        <option value="причина три" class="forms__select-op forms__select-op-reson">причина три</option>
                     </select>
                     <label for="text-commit" class="forms__label forms__label-text-commit">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
@@ -69,25 +76,33 @@
                         но большинство из них
                         имеет не всегда.</h2>
                 </div>
-                <form action="#" class="forms__form forms-second-stage__form">
+                <form class="forms__form forms-second-stage__form">
                     <label for="selector-offer" class="forms__label forms-second-stage__label-offer">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
                     <select name="" id="selector-offer" class="forms__select forms-second-stage__select-offer">
-                        <option value="" class="forms__select-op forms-second-stage__select-op-ofer">предложение от
+                        <option selected disabled value="" class="forms__select-op forms-second-stage__select-op-ofer">
+                            предложение
+                        </option>
+                        <option value="предложение от провайдера1"
+                            class="forms__select-op forms-second-stage__select-op-ofer">предложение от
                             провайдера1</option>
-                        <option value="" class="forms__select-op forms-second-stage__select-op-ofer">предложение от
+                        <option value="предложение от провайдера2"
+                            class="forms__select-op forms-second-stage__select-op-ofer">предложение от
                             провайдера2</option>
-                        <option value="" class="forms__select-op forms-second-stage__select-op-ofer">предложение от
+                        <option value="предложение от провайдера3"
+                            class="forms__select-op forms-second-stage__select-op-ofer">предложение от
                             провайдера3</option>
                     </select>
                     <label for="selector-tariff" class="forms__label forms-second-stage__label-tariff">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
                     <select name="" id="selector-tariff" class="forms__select forms-second-stage__select-tariff">
-                        <option value="" class="forms__select-op forms-second-stage__select-op-tariff">тарифные 1
+                        <option selected disabled value=""
+                            class="forms__select-op forms-second-stage__select-op-tariff">тариф</option>
+                        <option value="тариф 1" class="forms__select-op forms-second-stage__select-op-tariff">тариф 1
                         </option>
-                        <option value="" class="forms__select-op forms-second-stage__select-op-tariff">тарифные 2
+                        <option value="тариф 2" class="forms__select-op forms-second-stage__select-op-tariff">тариф 2
                         </option>
-                        <option value="" class="forms__select-op forms-second-stage__select-op-tariff">тарифные 3
+                        <option value="тариф 3" class="forms__select-op forms-second-stage__select-op-tariff">тариф 3
                         </option>
                     </select>
                     <div class="forms__btn-container forms-second-stage__btn-container">
@@ -111,43 +126,27 @@
                     <h3 class="forms__title forms-third-stage__title">сводную информацию по заявке звонящего для
                         подтверждения заявки и отправки ее супервайзеру.</h3>
                 </div>
-                <form action="#" class="forms__form forms-third-stage__form">
-                    <ul class="forms-third-stage__list-container">
-                        <li class="forms-third-stage__list">ФИО:
-                            <p class="forms-third-stage__subtitle fullname">Jdia Michelle</p>
-                        </li>
-                        <li class="forms-third-stage__list">город:
-                            <p class="forms-third-stage__subtitle city">SPB</p>
-                        </li>
-                        <li class="forms-third-stage__list">адрес:
-                            <p class="forms-third-stage__subtitle address">Malaya Sadovaya</p>
-                        </li>
-                        <li class="forms-third-stage__list">номер телефона:
-                            <p class="forms-third-stage__subtitle phone">89992008556</p>
-                        </li>
-                        <li class="forms-third-stage__list">дополнительный номер телефона:
-                            <p class="forms-third-stage__subtitle other-phone">89992008556</p>
-                        </li>
-                        <li class="forms-third-stage__list">причина обращения:
-                            <p class="forms-third-stage__subtitle reson">причина обращения </p>
-                        </li>
-                        <li class="forms-third-stage__list">дополнительный комментарий:
-                            <p class="forms-third-stage__subtitle commit">дополнительный комментарий </p>
-                        </li>
-                        <li class="forms-third-stage__list">услуги и тарифы:
-                            <p class="forms-third-stage__subtitle tariff">услуги и тарифы</p>
-                        </li>
-                        <li class="forms-third-stage__list">предложение от провайдера:
-                            <p class="forms-third-stage__subtitle offer">предложение от провайдера</p>
-                        </li>
-                    </ul>
+                <form class="forms__form forms-third-stage__form">
+                    <div class="forms-third-stage__list-container">
+                        <template class="template">
+                            <p class="forms-third-stage__subtitle fullname"></p>
+                            <p class="forms-third-stage__subtitle address"></p>
+                            <p class="forms-third-stage__subtitle phone"></p>
+                            <p class="forms-third-stage__subtitle additional-phone"></p>
+                            <p class="forms-third-stage__subtitle city"></p>
+                            <p class="forms-third-stage__subtitle reson"></p>
+                            <p class="forms-third-stage__subtitle commit"></p>
+                            <p class="forms-third-stage__subtitle offer"></p>
+                            <p class="forms-third-stage__subtitle tariff"></p>
+                        </template>
+                    </div>
                     <div class="forms__btn-container forms-third-stage__btn-container">
                         <button type="button"
                             class="forms__btn forms__btn-cancel forms-third-stage-cancel">отмена</button>
                         <button type="button"
                             class="forms__btn forms__btn-back forms-third-stage__btn-back">назад</button>
                         <button type="button"
-                            class="forms__btn forms__btn-next forms-third-stage__btn-next">отправеть</button>
+                            class="forms__btn forms__btn-next forms-third-stage__btn-next send">отправеть</button>
                     </div>
                 </form>
             </div>
@@ -160,10 +159,29 @@
                     <h4 class="forms__title forms-fourth-stage__title">скрипта со словами благодарности и завершения
                         диалога..</h4>
                 </div>
-                <button type="submit" class="forms__btn forms-fourth-stage__btn-finish">завершить</button>
+                <button type="button" class="forms__btn forms-fourth-stage__btn-finish">завершить</button>
             </div>
         </section>
         <!-- end fourth stage -->
+        <!-- start popup -->
+        <section class="popup">
+            <div class="popup__container">
+                <h4 class="popup__title"> и завершения диалога..</h4>
+                <select name="selector-reson" id="select-reson-cancel" class="popup__select">
+                    <option selected disabled value="" class="popup__select-op">причина
+                        звонка</option>
+                    <option value="причина один" class="popup__select-op">причина один
+                    </option>
+                    <option value="причина два" class="popup__select-op">причина два
+                    </option>
+                    <option value="причина три" class="popup__select-op">причина три</option>
+                </select>
+                <textarea name="" id="text-commit-cancel" cols="30" rows="10" class="popup__text-commit"
+                    placeholder="Дополнительный комментарий"></textarea>
+                <button type="button" class="popup__btn">закрыть</button>
+            </div>
+        </section>
+        <!-- end popup -->
 
     </div>
     <script src="./js/script.js"></script>

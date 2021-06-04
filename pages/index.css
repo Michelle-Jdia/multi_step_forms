@@ -25,8 +25,17 @@
 @import url("../blocks/forms-third-stage/__list-container/forms-third-stage__list-container.css");
 @import url("../blocks/forms-third-stage/__subtitle/forms-third-stage__subtitle.css");
 
-
 /* fourth forms*/
 @import url("../blocks/forms-fourth-stage/forms-fourth-stage.css");
 @import url("../blocks/forms-fourth-stage/__title-container/forms-fourth-stage__title-container.css");
 @import url("../blocks/forms-fourth-stage/__title/forms-fourth-stage__title.css");
+
+/* popup cancel */
+
+@import url("../blocks/popup/popup.css");
+@import url("../blocks/popup/__container/popup__container.css");
+@import url("../blocks/popup/__text-commit/popup__text-commit.css");
+
+@import url("../blocks/popup/__select/popup__select.css");
+@import url("../blocks/popup/__title/popup__title.css");
+@import url("../blocks/popup/__btn/popup__btn.css");

@@ -1,0 +1,10 @@
+.popup__container {
+    text-align: center;
+    position: relative;
+    width: 430px;
+    background-color: #000000;
+    box-shadow: 0px 0px 25px rgba(0, 4, 0, 0.809);
+    border-radius: 10px;
+    margin: 0;
+    padding-bottom: 37px;
+}
