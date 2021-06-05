@@ -1,3 +1,4 @@
+import "../pages/index.css";
 let users = [];
 
 // function for add user as object to array (users)
@@ -21,7 +22,6 @@ document
   .querySelector(".forms-second-stage__btn-next")
   .addEventListener("click", addUser);
 
-const addInfoBtn = document.querySelector(".forms-second-stage__btn-next");
 const elementCocntainer = document.querySelector(
   ".forms-third-stage__list-container"
 );
