@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./pages/index.css">
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body class="body">
@@ -22,15 +23,15 @@
                     <label for="name-input" class="forms__label forms__label-name">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
                     <input type="text" class="forms__input forms__name-input" placeholder="ФИО" name="name"
-                        id="name-input" value="" onfocus="show(this)" onfocusout="hide(this)">
+                        id="name-input" value="" min="5" max="30" required>
                     <label for="address-input" class="forms__label forms__label-address">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
                     <input type="text" class="forms__input forms__address-input" placeholder="Адрес" value=""
-                        name="address">
+                        name="address" required>
                     <label for="num-input" class="forms__label forms__label-num">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
                     <input type="tel" class="forms__input forms__num-input" placeholder="Номер телефона" id="num-input"
-                        pattern="^[0-9-+\s()]*$" value="" name="phone">
+                        pattern="^[0-9-+\s()]*$" value="" name="phone" required>
                     <label for="num-input-additional" class="forms__label forms__label-additional">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
                     <input type="tel" class="forms__input forms__num-input-additional" name="additional-phone"
@@ -38,7 +39,7 @@
                         value="">
                     <label for="selector-city" class="forms__label forms__label-city">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <select name="" id="selector-city" class="forms__select selector-city">
+                    <select name="" id="selector-city" class="forms__select selector-city" required>
                         <option selected disabled value="" class="forms__select-op">Город</option>
                         <option value="Москва" class="forms__select-op">Москва</option>
                         <option value="Санкт-петербург" class="forms__select-op">Санкт-петербург</option>
@@ -46,7 +47,7 @@
                     </select>
                     <label for="selector-reson" class="forms__label forms__label-reson">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <select name="selector-reson" id="select-reson" class="forms__select forms__select-reson">
+                    <select name="selector-reson" id="select-reson" class="forms__select forms__select-reson" required>
                         <option selected disabled value="" class="forms__select-op forms__select-op-reson">причина
                             звонка </option>
                         <option value="причина один" class="forms__select-op forms__select-op-reson">причина один
@@ -61,7 +62,7 @@
                         placeholder="Дополнительный комментарий обращения"></textarea>
                     <div class="forms__btn-container">
                         <button type="button" class="forms__btn forms__btn-cancel">отмена</button>
-                        <button type="button" class="forms__btn forms__btn-next">далее</button>
+                        <button type="button" class="forms__btn forms__btn-next next">далее</button>
                     </div>
                 </form>
             </div>
@@ -111,7 +112,7 @@
                         <button type="button"
                             class="forms__btn forms__btn-back forms-second-stage__btn-back">назад</button>
                         <button type="button"
-                            class="forms__btn forms__btn-next forms-second-stage__btn-next">далее</button>
+                            class="forms__btn forms__btn-next forms-second-stage__btn-next next">далее</button>
                     </div>
                 </form>
             </div>
@@ -178,13 +179,12 @@
                 </select>
                 <textarea name="" id="text-commit-cancel" cols="30" rows="10" class="popup__text-commit"
                     placeholder="Дополнительный комментарий"></textarea>
-                <button type="button" class="popup__btn">закрыть</button>
+                <button type="submit" class="popup__btn">закрыть</button>
             </div>
         </section>
         <!-- end popup -->
 
     </div>
-    <script src="./js/script.js"></script>
 </body>
 
 </html>

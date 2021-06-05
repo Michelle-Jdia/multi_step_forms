@@ -1,15 +1,6 @@
-const steps = Array.from(document.querySelectorAll(".forms"));
-const nextBtn = document.querySelectorAll(".forms__btn-next");
-const prevBtn = document.querySelectorAll(".forms__btn-back");
-const lastBtn = document.querySelector(".forms-fourth-stage__btn-finish");
-const form = document.querySelectorAll(".forms__form");
-const addInfoBtn = document.querySelector(".forms-second-stage__btn-next");
-const elementCocntainer = document.querySelector(
-  ".forms-third-stage__list-container"
-);
-const template = document.querySelector(".template");
-
 let users = [];
+
+// function for add user as object to array (users)
 const addUser = (e) => {
   e.preventDefault();
   let user = {
@@ -29,6 +20,12 @@ const addUser = (e) => {
 document
   .querySelector(".forms-second-stage__btn-next")
   .addEventListener("click", addUser);
+
+const addInfoBtn = document.querySelector(".forms-second-stage__btn-next");
+const elementCocntainer = document.querySelector(
+  ".forms-third-stage__list-container"
+);
+const template = document.querySelector(".template");
 
 function getItem(item) {
   const allP = template.content.cloneNode(true);
@@ -53,26 +50,37 @@ function getItem(item) {
   return allP;
 }
 
+// rander elemets to page
 function addEl() {
   elementCocntainer.innerHTML = "";
   const page = users.map(getItem);
   elementCocntainer.prepend(...page);
 }
+//  reset array
 function removeEl() {
   users = [];
 }
+//  add data to local storge
 function addUsersToLocalStorge() {
   localStorage.setItem("MyUsers", JSON.stringify(users));
 }
-const checkInfoBtn = document.querySelector(".forms-second-stage__btn-next");
-checkInfoBtn.addEventListener("click", () => {
-  addEl();
-});
 
-/////////////////////////////////////////////////
+const checkInfoBtn = document
+  .querySelector(".forms-second-stage__btn-next")
+  .addEventListener("click", () => {
+    addEl();
+  });
+
+// ////////////////////////////////////////////////////////////////
+
+//  multi step functions
+const steps = Array.from(document.querySelectorAll(".forms"));
+const form = Array.from(document.querySelectorAll(".forms__form"));
+
+// function to make next step
 function changeStep(btn) {
-  let index = 0;
   const active = document.querySelector(".forms__show");
+  let index = 0;
   index = steps.indexOf(active);
   steps[index].classList.remove("forms__show");
   if (btn === "next") {
@@ -82,60 +90,80 @@ function changeStep(btn) {
   }
   steps[index].classList.add("forms__show");
 }
-// ////////////////
-nextBtn.forEach((btn) => {
+
+//  function back to first step
+function backToPrimaryStep() {
+  const active = document.querySelector(".forms__show");
+  let index = 0;
+  index = steps.indexOf(active);
+  steps[index].classList.remove("forms__show");
+  steps[0].classList.add("forms__show");
+}
+
+// function to reset all inputs
+function resetInputs() {
+  form.forEach((f) => {
+    f.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+    return f.reset();
+  });
+}
+
+// function toggle popup (when cancel)
+const popup = document.querySelector(".popup");
+
+function openPopupCancel() {
+  popup.classList.add("popup__show");
+}
+
+const popupCloseBtn = document
+  .querySelector(".popup__btn")
+  .addEventListener("click", () => {
+    popup.classList.remove("popup__show");
+  });
+
+// foreach all next btn and add event listener
+const nextBtn = document.querySelectorAll(".forms__btn-next").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     changeStep("next");
   });
 });
 
-prevBtn.forEach((btn) => {
+// foreach all back btn and add event listener
+const prevBtn = document.querySelectorAll(".forms__btn-back").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     changeStep("prev");
     removeEl();
   });
 });
-//////////////////////
-lastBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  form.forEach((f) => {
-    f.reset();
+
+// the last btn (finish btn)
+const lastBtn = document
+  .querySelector(".forms-fourth-stage__btn-finish")
+  .addEventListener("click", (e) => {
+    resetInputs();
+    backToPrimaryStep();
   });
-  let index = 0;
-  const active = document.querySelector(".forms__show");
-  index = steps.indexOf(active);
-  steps[index].classList.remove("forms__show");
-  steps[0].classList.add("forms__show");
-});
-// ////////////////////
+
+// send data to local storge send btn
 const sendBtn = document
   .querySelector(".send")
-  .addEventListener("click", () => {
+  .addEventListener("click", (e) => {
     addUsersToLocalStorge();
     removeEl();
   });
-const cancelBtn = document.querySelectorAll(".forms__btn-cancel");
-cancelBtn.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    openPopupCancel();
-    form.forEach((f) => {
-      f.reset();
+
+// forEach cancel btn and add event to close delete array and open popup whene click cancel
+
+const cancelBtn = document
+  .querySelectorAll(".forms__btn-cancel")
+  .forEach((btn) => {
+    btn.addEventListener("submit", (e) => {
+      e.preventDefault();
+      openPopupCancel();
+      resetInputs();
+      backToPrimaryStep();
+      removeEl();
     });
-    let index = 0;
-    const active = document.querySelector(".forms__show");
-    index = steps.indexOf(active);
-    steps[index].classList.remove("forms__show");
-    steps[0].classList.add("forms__show");
-    removeEl();
-  });
-});
-// ////////////////////
-const popup = document.querySelector(".popup");
-function openPopupCancel() {
-  popup.classList.add("popup__show");
-}
-const popupCloseBtn = document
-  .querySelector(".popup__btn")
-  .addEventListener("click", () => {
-    popup.classList.remove("popup__show");
   });
