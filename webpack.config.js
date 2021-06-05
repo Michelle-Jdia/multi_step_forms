@@ -23,7 +23,7 @@ module.exports = {
     },
     module: {
         rules: [{
-                test: /\.js$/,
+                test: /\.(js|tsx?)$/,
                 use: 'babel-loader',
                 exclude: '/node_modules/'
             },

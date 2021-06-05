@@ -1,6 +1,6 @@
 const presets = [
-    ['@babel/env', { // какой пресет использовать
-      targets: { // какие версии браузеров поддерживать
+    ['@babel/env', {
+      targets: {
         edge: '17',
         ie: '11',
         firefox: '50',
@@ -8,10 +8,15 @@ const presets = [
         safari: '11.1'
       },
   
-      // использовать полифиллы для браузеров из свойства target
-      // по умолчанию babel использует поллифиллы библиотеки core-js
       useBuiltIns: "entry"
     }]
   ];
   
-  module.exports = { presets };
+  const plugins = [
+    ["@babel/plugin-proposal-decorators",{"decoratorsBeforeExport":true}],
+    ["@babel/plugin-proposal-class-properties"],
+    ["@babel/transform-runtime"]];
+return {
+    presets,
+    plugins
+};
