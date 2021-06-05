@@ -22,16 +22,16 @@
                 <form class="forms__form">
                     <label for="name-input" class="forms__label forms__label-name">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <input type="text" class="forms__input forms__name-input" placeholder="ФИО" name="name"
-                        id="name-input" value="" min="5" max="30" required>
+                    <input type="text" class="forms__input forms__name-input input-validate" placeholder="ФИО"
+                        name="name" id="name-input" value="" min="5" max="30" required>
                     <label for="address-input" class="forms__label forms__label-address">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <input type="text" class="forms__input forms__address-input" placeholder="Адрес" value=""
-                        name="address" required>
+                    <input type="text" class="forms__input forms__address-input input-validate" placeholder="Адрес"
+                        value="" name="address" required>
                     <label for="num-input" class="forms__label forms__label-num">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <input type="tel" class="forms__input forms__num-input" placeholder="Номер телефона" id="num-input"
-                        pattern="^[0-9-+\s()]*$" value="" name="phone" required>
+                    <input type="tel" class="forms__input forms__num-input input-validate" placeholder="Номер телефона"
+                        id="num-input" pattern="^[0-9-+\s()]*$" value="" name="phone" required>
                     <label for="num-input-additional" class="forms__label forms__label-additional">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
                     <input type="tel" class="forms__input forms__num-input-additional" name="additional-phone"
@@ -39,7 +39,7 @@
                         value="">
                     <label for="selector-city" class="forms__label forms__label-city">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <select name="" id="selector-city" class="forms__select selector-city" required>
+                    <select name="" id="selector-city" class="forms__select selector-city input-validate" required>
                         <option selected disabled value="" class="forms__select-op">Город</option>
                         <option value="Москва" class="forms__select-op">Москва</option>
                         <option value="Санкт-петербург" class="forms__select-op">Санкт-петербург</option>
@@ -47,7 +47,8 @@
                     </select>
                     <label for="selector-reson" class="forms__label forms__label-reson">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <select name="selector-reson" id="select-reson" class="forms__select forms__select-reson" required>
+                    <select name="selector-reson" id="select-reson"
+                        class="forms__select forms__select-reson input-validate" required>
                         <option selected disabled value="" class="forms__select-op forms__select-op-reson">причина
                             звонка </option>
                         <option value="причина один" class="forms__select-op forms__select-op-reson">причина один
@@ -80,26 +81,20 @@
                 <form class="forms__form forms-second-stage__form">
                     <label for="selector-offer" class="forms__label forms-second-stage__label-offer">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <select name="" id="selector-offer" class="forms__select forms-second-stage__select-offer">
-                        <option selected disabled value="" class="forms__select-op forms-second-stage__select-op-ofer">
-                            предложение
-                        </option>
-                        <option value="предложение от провайдера1"
-                            class="forms__select-op forms-second-stage__select-op-ofer">предложение от
-                            провайдера1</option>
-                        <option value="предложение от провайдера2"
-                            class="forms__select-op forms-second-stage__select-op-ofer">предложение от
-                            провайдера2</option>
-                        <option value="предложение от провайдера3"
-                            class="forms__select-op forms-second-stage__select-op-ofer">предложение от
-                            провайдера3</option>
+                    <select name="" id="selector-offer"
+                        class="forms__select forms-second-stage__select-offer input-validate">
+                        <option value="" class="forms__select-op forms-second-stage__select-op-ofer">предложение</option>
+                        <option selected value="предложение от провайдера1" class="forms__select-op forms-second-stage__select-op-ofer">предложение от провайдера1</option>
+                        <option value="предложение от провайдера2" class="forms__select-op forms-second-stage__select-op-ofer">предложение от провайдера2</option>
+                        <option value="предложение от провайдера3" class="forms__select-op forms-second-stage__select-op-ofer">предложение от провайдера3</option>
                     </select>
                     <label for="selector-tariff" class="forms__label forms-second-stage__label-tariff">Текст скрипта
                         Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</label>
-                    <select name="" id="selector-tariff" class="forms__select forms-second-stage__select-tariff">
-                        <option selected disabled value=""
-                            class="forms__select-op forms-second-stage__select-op-tariff">тариф</option>
-                        <option value="тариф 1" class="forms__select-op forms-second-stage__select-op-tariff">тариф 1
+                    <select name="" id="selector-tariff"
+                        class="forms__select forms-second-stage__select-tariff input-validate">
+                        <option value="" class="forms__select-op forms-second-stage__select-op-tariff">тариф</option>
+                        <option selected value="тариф 1" class="forms__select-op forms-second-stage__select-op-tariff">
+                            тариф 1
                         </option>
                         <option value="тариф 2" class="forms__select-op forms-second-stage__select-op-tariff">тариф 2
                         </option>

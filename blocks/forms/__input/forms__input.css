@@ -21,3 +21,7 @@
 .forms__form .forms__input:nth-of-type(4) {
   margin-right: 0;
 }
+.forms__input_error {
+color: red;
+border: red solid 2px;
+}

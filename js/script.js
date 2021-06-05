@@ -167,3 +167,21 @@ const cancelBtn = document
       removeEl();
     });
   });
+
+// a simple validations
+const inputsValidate = Array.from(document.querySelectorAll(".input-validate"));
+
+document.addEventListener("mousemove", () => {
+  inputsValidate.forEach((n) => {
+    const btnNextFirstStep = Array.from(document.querySelectorAll(".next"));
+    btnNextFirstStep.forEach((b) => {
+      if (n.value === "" || n.value.length <= 3) {
+        b.disabled = true;
+        n.classList.add("forms__input_error");
+      } else {
+        b.disabled = false;
+        n.classList.remove("forms__input_error");
+      }
+    });
+  });
+});
