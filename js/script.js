@@ -125,14 +125,14 @@ const popupCloseBtn = document
 
 // foreach all next btn and add event listener
 const nextBtn = document.querySelectorAll(".forms__btn-next").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
+  btn.addEventListener("click", () => {
     changeStep("next");
   });
 });
 
 // foreach all back btn and add event listener
 const prevBtn = document.querySelectorAll(".forms__btn-back").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
+  btn.addEventListener("click", () => {
     changeStep("prev");
     removeEl();
   });
@@ -141,7 +141,7 @@ const prevBtn = document.querySelectorAll(".forms__btn-back").forEach((btn) => {
 // the last btn (finish btn)
 const lastBtn = document
   .querySelector(".forms-fourth-stage__btn-finish")
-  .addEventListener("click", (e) => {
+  .addEventListener("click", () => {
     resetInputs();
     backToPrimaryStep();
   });
@@ -149,7 +149,7 @@ const lastBtn = document
 // send data to local storge send btn
 const sendBtn = document
   .querySelector(".send")
-  .addEventListener("click", (e) => {
+  .addEventListener("click", () => {
     addUsersToLocalStorge();
     removeEl();
   });
@@ -159,8 +159,7 @@ const sendBtn = document
 const cancelBtn = document
   .querySelectorAll(".forms__btn-cancel")
   .forEach((btn) => {
-    btn.addEventListener("submit", (e) => {
-      e.preventDefault();
+    btn.addEventListener("click", () => {
       openPopupCancel();
       resetInputs();
       backToPrimaryStep();
@@ -169,19 +168,16 @@ const cancelBtn = document
   });
 
 // a simple validations
+
+// a simple validations
 const inputsValidate = Array.from(document.querySelectorAll(".input-validate"));
 
 document.addEventListener("mousemove", () => {
   inputsValidate.forEach((n) => {
-    const btnNextFirstStep = Array.from(document.querySelectorAll(".next"));
-    btnNextFirstStep.forEach((b) => {
-      if (n.value === "" || n.value.length <= 3) {
-        b.disabled = true;
-        n.classList.add("forms__input_error");
-      } else {
-        b.disabled = false;
-        n.classList.remove("forms__input_error");
-      }
-    });
+    if (n.value === "" || n.value.length <= 3) {
+      n.classList.add("forms__input_error");
+    } else {
+      n.classList.remove("forms__input_error");
+    }
   });
 });
